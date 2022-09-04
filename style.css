@@ -1,0 +1,63 @@
+:root{
+    --speed:6;
+}
+
+body{
+    background-color: black;
+}
+
+.machine{
+    background-color: peru;
+    height: 600px;
+    display: flex;
+    width: 70%;
+    margin-left: 200px;
+    border: solid;
+}
+
+.slot{
+    background-color: brown;
+    height: 250px;
+    width: 220px;
+    display: flex;
+    margin: 20px;
+    margin-top: 40px;
+    color: black;
+    font-size: 80pt;
+    border: solid;
+    align-items: center;
+    padding-left: 60px;
+    overflow: hidden;
+}
+#words{
+    display:block;
+}
+
+#stop{
+    margin-left: 25%;
+    padding: 20px;
+    background-color: cornflowerblue;
+}
+
+#inputSpeed {
+    font-size: 30px;
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 50px;
+}
+
+.slot > .value{
+    animation-name: slotspin;
+    animation-iteration-count: infinite;
+    animation-duration:calc(1s/var(--speed));;
+}
+
+@keyframes slotspin {
+    0%{
+        transform: translateY(-160px);
+    }
+
+    100%{
+        transform: translateY(160px);
+    }
+}
